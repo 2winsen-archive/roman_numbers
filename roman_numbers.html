@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<title>To Roman</title>
+	</head>
+	<body>
+		Roman Number: <input id="inp" type="text" />
+		<br />
+		Integer Number: <span id="res"></span>
+		<script>
+			const inp = document.getElementById('inp');
+			inp.focus();
+			const res = document.getElementById('res');
+			inp.addEventListener("change", e => {
+				const val = e.target.value && e.target.value.toLowerCase();
+				res.innerHTML = toRoman(val);
+			});
+		</script>
+		<script type="text/javascript" src="roman_numbers.js"></script>
+		<script type="text/javascript" src="roman_numbers.test.js"></script>
+	</body>
+</html>
